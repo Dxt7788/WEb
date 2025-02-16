@@ -1,0 +1,68 @@
+header {
+    background-image: url(fotos/Dtrr\ \(2\).png);
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Ajusta la altura a tu preferencia */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img { 
+    margin-top: 70px;
+    margin-left: 100px;
+    display: flex;
+    gap: 70px;
+}
+
+.fondo-img {
+    padding: 25px;
+    background-color: rgb(247, 206, 71);
+    border-radius: 15px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Estilo de los enlaces dentro de .rutas */
+.rutas {
+    padding: 10px;
+    background-color: rgb(247, 206, 71);
+    text-align: center;
+}
+
+/* Estilo base para los enlaces */
+.rutas .text {
+    text-decoration: none;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    color: black; /* Color base para el texto */
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+/* Línea debajo del texto */
+.rutas .text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; /* Cambia el color de la línea si lo deseas */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Al pasar el mouse, la línea se expande */
+.rutas .text:hover::after {
+    width: 100%; /* La línea se expande completamente */
+}
+
+/* Cambio de color del texto (sin hacer que desaparezca) */
+.rutas .text:hover {
+    color: #4b4a4a; /* Amarillo o el color que prefieras */
+    transition: color 0.3s ease-in-out;
+}

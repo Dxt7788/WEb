@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo básico para el botón de WhatsApp */
+        .whatsapp-button {
+            background-color: #25D366; /* Verde de WhatsApp */
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E; /* Color más oscuro de WhatsApp */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Aquí puedes poner tu encabezado si es necesario -->
+    </header>
+
+    <div class="rutas">
+        <a class="text" href="/">Inicio |</a>
+        <a class="text" href="producto.html">Productos</a>
+    </div>
+
+    <div class="fotos-productos">
+        <!-- Carrusel de imágenes -->
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="fotos/Diseño sin título (4).png" alt="Producto - Vista 1">
+            <img src="fotos/Diseño sin título (3).png" alt="Producto - Vista 2"> <!-- Asegúrate de que esta ruta sea correcta -->
+            <img src="fotos/Diseño sin título (2).png" alt="Producto - Vista 3">
+            <img src="fotos/Diseño sin título (1).png" alt="Producto - Vista 4">
+          </div>
+      
+          <!-- Flechas de navegación -->
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="fuente">
+            <h1>Athlon 3000g usado</h1>
+            <h3><span>Velocidad de reloj:</span> 3.50 GHz, <span>Socket:</span> AM4, <span>Gráficos integrados:</span> Radeon Vega 3, <span>2 núcleos y 4 hilos, Un mes de uso.</span></h3>
+            <h1 style="color: rgb(9, 204, 9);">$45.000</h1>
+            <!-- Enlace de WhatsApp -->
+            <a href="https://wa.me/+541139397431?text=¿Sigue%20estando%20disponible%20el%20Athlon%203000g?" class="whatsapp-button" target="_blank">
+              Consultar
+            </a>
+        </div>
+    </div>
+
+    <script>
+      let index = 0;
+
+      function moveSlide(step) {
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+
+        // Calcula el índice de la imagen siguiente o anterior
+        index = (index + step + totalImages) % totalImages;
+
+        // Mueve el carrusel
+        const carousel = document.querySelector('.carousel-images');
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
+    </script>
+</body>
+</html>

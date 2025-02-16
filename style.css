@@ -1,0 +1,177 @@
+header {
+    background-image: url(productos/fotos/Dtrr\ \(2\).png);
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Ajusta la altura a tu preferencia */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Estilo de los enlaces dentro de .rutas */
+.rutas {
+    padding: 10px;
+    background-color: rgb(247, 206, 71);
+    text-align: center;
+}
+
+/* Estilo base para los enlaces */
+.rutas .text {
+    text-decoration: none;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    color: black; /* Color base para el texto */
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+/* Línea debajo del texto */
+.rutas .text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; /* Cambia el color de la línea si lo deseas */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Al pasar el mouse, la línea se expande */
+.rutas .text:hover::after {
+    width: 100%; /* La línea se expande completamente */
+}
+
+/* Cambio de color del texto (sin hacer que desaparezca) */
+.rutas .text:hover {
+    color: #4b4a4a; /* Amarillo o el color que prefieras */
+    transition: color 0.3s ease-in-out;
+}
+
+
+.servicios{
+    margin-top: 60px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.serv-centrar {
+    display: flex;
+    flex-direction: column; /* Para alinear los elementos de arriba hacia abajo */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación para sombra y movimiento */
+    height: 200px; /* Altura del bloque, ajusta según sea necesario */
+    max-width: 300px; /* Limita el ancho del bloque */
+    text-align: center; /* Alinea el texto al centro dentro del bloque */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    word-wrap: break-word; /* Permite que las palabras largas se dividan y ajusten al ancho */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    border-radius: 15px;
+}
+
+.serv-centrar:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más grande */
+    transform: translateY(-10px); /* Eleva el bloque cuando el mouse está encima */
+}
+
+.serv-centrar h1 {
+    margin: 0; /* Elimina márgenes para que el título se mantenga compacto */
+    font-size: 24px; /* Ajusta el tamaño del título */
+    white-space: nowrap; /* Evita que el título se divida en varias líneas */
+    overflow: hidden; /* Oculta cualquier desbordamiento de texto */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto se desborda */
+}
+
+.serv-centrar p {
+    margin: 10px 0 0 0; /* Espaciado entre el título y la descripción */
+    font-size: 16px; /* Ajusta el tamaño del párrafo */
+    white-space: normal; /* Permite que el texto del párrafo se ajuste automáticamente */
+}
+
+
+
+.centrar{
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+  }
+  
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Estilos para las flechas */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .fotos-productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    margin-top: 60px;
+  }
+
+
+  .fuente{ 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .whatsapp-button {
+    background-color: #25D366; /* Color verde característico de WhatsApp */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128C7E; /* Color más oscuro al pasar el cursor */
+  }
